@@ -1,0 +1,120 @@
+/* استيراد خط عربي */
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap');
+
+body {
+    background: linear-gradient(to bottom, #0a47a9, #d0d8f0);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'Tajawal', sans-serif;
+    direction: rtl;
+    text-align: center;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    width: 320px;
+}
+
+h2 {
+    color: #003366;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input-group {
+    display: flex;
+    background: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    height: 23px;
+    align-items: center;
+}
+
+.input-group i {
+    /* display: flex;
+    align-items: center;
+    background: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    margin-bottom: 10px;
+    color: #777;
+    font-size: 16px;
+    margin-left: -10px;
+     */
+    margin-right: 10px; 
+    margin-left: 10px;
+    color: #777;
+    font-size: 16px;
+}
+
+.input-group input {
+    border: none;
+    outline: none;
+    flex: 1; 
+    font-size: 16px;
+    text-align: right;
+}
+
+.input-group select {
+    width: 100%;
+    padding: 12px 40px 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    text-align: right;
+    border: none;
+    outline: none;
+}
+
+select {
+    appearance: none;
+    background-color: white;
+    cursor: pointer;
+}
+
+label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #003366;
+    text-align: right;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+}
+
+button {
+    background: #0a47a9;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #083a85;
+}

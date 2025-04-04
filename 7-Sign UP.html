@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل حساب جديد</title>
+    <link rel="stylesheet" href="8-Sign Up Styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h2>تسجيل حساب جديد</h2>
+        <form>
+            <div class="input-group">
+                <i class="fa fa-user"></i>
+                <input type="text" placeholder="أدخل اسمك الكامل" required>
+            </div>
+
+            <div class="input-group">
+                <i class="fas fa-envelope"></i>
+                <input type="email" placeholder="البريد الإلكتروني" required>
+            </div>
+
+            <div class="input-group">
+                <i class="fas fa-lock"></i>
+                <input type="password" placeholder="كلمة المرور" required>
+                <i class="fas fa-eye-slash toggle-password"></i>
+            </div>
+
+            <div class="input-group">
+                <i class="fa fa-phone"></i>
+                <input type="tel" placeholder="أدخل رقم هاتفك" required>
+            </div>
+
+            <label>اختر المحافظة:</label>
+            <div class="input-group">
+                <select required>
+                    <option value="">اختر المحافظة</option>
+                    <option value="cairo">القاهرة</option>
+                    <option value="alex">الإسكندرية</option>
+                    <option value="giza">بورسعيد</option>
+                    <option value="giza">دمياط</option>
+                    <option value="giza">القليوبية</option>
+                    <option value="giza">أسوان</option>
+                    <option value="giza">الدقهلية</option>
+                    <option value="giza">كفر الشيخ</option>
+                    <option value="giza">المنيا</option>
+                    <option value="giza">الفيوم</option>
+                    <option value="giza">الإسماعيلية</option>
+                    <option value="giza">أسيوط</option>
+                    <option value="giza">الأقصر</option>
+                    <option value="giza">البحيرة</option>
+                    <option value="giza">بني سويف</option>
+                    <option value="giza">الجيزة</option>
+                    <option value="giza">سوهاج</option>
+                    <option value="giza">الغربية</option>
+                    <option value="giza">مطروح</option>
+                    <option value="giza">الوادي الجديد</option>
+                </select>
+            </div>
+
+            <button type="submit">حفظ</button>
+        </form>
+    </div>
+
+    <!-- لإظهار و اخفاء الباسورد -->
+    <script>
+        const togglePassword = document.querySelector('.toggle-password');
+        const passwordInput = document.querySelector('input[type="password"]');
+    
+        togglePassword.addEventListener('click', function () {
+            const isPassword = passwordInput.type === 'password';
+            passwordInput.type = isPassword ? 'text' : 'password';
+            this.classList.toggle('fa-eye-slash');
+            this.classList.toggle('fa-eye');
+        });
+    </script>
+    
+</body>
+</html>
