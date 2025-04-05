@@ -63,6 +63,15 @@ form {
     font-size: 16px;
 }
 
+.toggle-password {
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+  
+.toggle-password:hover {
+color: #007bff; 
+}
+
 .input-group input {
     border: none;
     outline: none;
