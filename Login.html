@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل الدخول</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap');
+        
+        body {
+            background: linear-gradient(to bottom, #0a47a9, #d0d8f0);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            font-family: 'Tajawal', sans-serif;
+            direction: rtl;
+            text-align: center;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        .login-container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            width: 320px;
+        }
+        
+        h2 {
+            margin-bottom: 10px;
+            color: #003366;
+        }
+        
+        .icon i {
+            font-size: 60px;
+            color: #0a47a9;
+            margin-bottom: 10px;
+        }
+        
+        p {
+            margin: 10px 0;
+            font-weight: bold;
+        }
+        
+        .input-group {
+            display: flex;
+            align-items: center;
+            background: #fff;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+        }
+        
+        .input-group i {
+            margin-right: 10px; 
+            margin-left: 10px;
+            color: #777;
+            font-size: 16px;
+        }
+        
+        .toggle-password {
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+          
+        .toggle-password:hover {
+        color: #007bff; 
+        }
+        
+        .input-group input {
+            border: none;
+            outline: none;
+            flex: 1; 
+            font-size: 16px;
+        }
+        
+        
+        button {
+            background: #0a47a9;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            border-radius: 20px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background: #083a85;
+        }
+        
+        .links {
+            margin-top: 10px;
+        }
+        
+        .links a {
+            color: #0a47a9;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        
+        .links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <div class="login-container">
+        <h2>تسجيل الدخول</h2>
+        <div class="icon">
+            <i class="fas fa-toolbox"></i>
+        </div>
+        <p>مرحبًا بك في سباكة</p>
+        <form>
+            <div class="input-group">
+                <i class="fas fa-envelope"></i>
+                <input type="email" placeholder="البريد الإلكتروني">
+            </div>
+            <div class="input-group">
+                <i class="fas fa-lock"></i>
+                <input type="password" placeholder="كلمة المرور">
+                <i class="fas fa-eye-slash toggle-password"></i>
+            </div>
+            <button type="submit">تسجيل الدخول</button>
+        </form>
+        <div class="links">
+            <a href="5-Fany Sign UP.html">تسجيل كفني</a> |
+            <a href="7-Sign UP.html">تسجيل كمستخدم</a>
+        </div>
+    </div>
+
+    <!-- لإظهار و اخفاء الباسورد -->
+    <script>
+        const togglePassword = document.querySelector('.toggle-password');
+        const passwordInput = document.querySelector('input[type="password"]');
+
+        togglePassword.addEventListener('click', function () {
+            const isPassword = passwordInput.type === 'password';
+            passwordInput.type = isPassword ? 'text' : 'password';
+            this.classList.toggle('fa-eye-slash');
+            this.classList.toggle('fa-eye');
+        });
+    </script>
+    
+</body>
+</html>
