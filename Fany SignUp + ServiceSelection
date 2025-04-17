@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اختيار الوظيفة والخدمات</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap');
+
+        body {
+            background: linear-gradient(to bottom, #0a47a9, #d0d8f0);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            font-family: 'Tajawal', sans-serif;
+            direction: rtl;
+            text-align: center;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            width: 320px;
+        }
+
+        h2 {
+            color: #003366;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .input-group {
+            display: flex;
+            background: #fff;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            height: 23px;
+            align-items: center;
+        }
+
+        .input-group i {
+            margin-right: 10px;
+            margin-left: 10px;
+            color: #777;
+            font-size: 16px;
+        }
+
+        .toggle-password {
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .toggle-password:hover {
+            color: #007bff;
+        }
+
+        .input-group input {
+            border: none;
+            outline: none;
+            flex: 1;
+            font-size: 16px;
+            text-align: right;
+        }
+
+        .input-group select {
+            width: 100%;
+            padding: 12px 40px 12px 15px;
+            border-radius: 8px;
+            font-size: 16px;
+            text-align: right;
+            border: none;
+            outline: none;
+        }
+
+        select {
+            appearance: none;
+            background-color: white;
+            cursor: pointer;
+        }
+
+        label {
+            font-size: 16px;
+            font-weight: bold;
+            color: #003366;
+            text-align: right;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+
+        button {
+            background: #0a47a9;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            border-radius: 20px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #083a85;
+        }
+
+        #services-container {
+            display: none;
+            text-align: right;
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+
+        #services-container label {
+            font-weight: bold;
+            color: #003366;
+            margin-bottom: 10px;
+            display: block;
+        }
+    </style>
+
+    <div class="container">
+        <h2>اختيار الوظيفة والخدمات</h2>
+        <form>
+            <div class="input-group">
+                <i class="fa fa-user"></i>
+                <input type="text" placeholder="أدخل اسمك الكامل" required>
+            </div>
+
+            <div class="input-group">
+                <i class="fa fa-envelope"></i>
+                <input type="email" placeholder="أدخل بريدك الإلكتروني" required>
+            </div>
+
+            <div class="input-group">
+                <i class="fas fa-lock"></i>
+                <input type="password" placeholder="كلمة المرور" required>
+                <i class="fas fa-eye-slash toggle-password"></i>
+            </div>
+
+            <div class="input-group">
+                <i class="fa fa-phone"></i>
+                <input type="tel" placeholder="أدخل رقم هاتفك" required>
+            </div>
+
+            <label>اختر وظيفتك:</label>
+            <div class="input-group">
+                <select id="job-select" required>
+                    <option value="">اختر الوظيفة</option>
+                    <option value="فني ألمونيوم">فني ألمونيوم</option>
+                    <option value="فني أثاث">فني أثاث</option>
+                    <option value="كهربائي">كهربائي</option>
+                    <option value="نجار">نجار</option>
+                    <option value="فني سخانات">فني سخانات</option>
+                    <option value="سباك">سباك</option>
+                    <option value="قدرات خاصه">قدرات خاصه</option>
+                    <option value="تنظيف">تنظيف</option>
+                </select>
+            </div>
+
+            <label>اختر المحافظة:</label>
+            <div class="input-group">
+                <select required>
+                    <option value="">اختر المحافظة</option>
+                    <option value="cairo">القاهرة</option>
+                    <option value="alex">الإسكندرية</option>
+                    <option value="portsaid">بورسعيد</option>
+                    <option value="damietta">دمياط</option>
+                    <option value="qalyubia">القليوبية</option>
+                    <option value="aswan">أسوان</option>
+                    <option value="dakahlia">الدقهلية</option>
+                    <option value="kafr">كفر الشيخ</option>
+                    <option value="minya">المنيا</option>
+                    <option value="fayoum">الفيوم</option>
+                    <option value="ismailia">الإسماعيلية</option>
+                    <option value="assiut">أسيوط</option>
+                    <option value="luxor">الأقصر</option>
+                    <option value="beheira">البحيرة</option>
+                    <option value="bani">بني سويف</option>
+                    <option value="giza">الجيزة</option>
+                    <option value="sohag">سوهاج</option>
+                    <option value="gharbia">الغربية</option>
+                    <option value="matrouh">مطروح</option>
+                    <option value="wadi">الوادي الجديد</option>
+                </select>
+            </div>
+
+            <div id="services-container">
+                <label>اختر الخدمات المطلوبة:</label>
+                <div id="services-list"></div>
+            </div>
+
+            <button type="submit">حفظ</button>
+        </form>
+    </div>
+
+    <script>
+        const togglePassword = document.querySelector('.toggle-password');
+        const passwordInput = document.querySelector('input[type="password"]');
+
+        togglePassword.addEventListener('click', function () {
+            const isPassword = passwordInput.type === 'password';
+            passwordInput.type = isPassword ? 'text' : 'password';
+            this.classList.toggle('fa-eye-slash');
+            this.classList.toggle('fa-eye');
+        });
+
+        const jobServices = {
+            "فني ألمونيوم": ["تصليح أي تسريب هوا من باب أو شباك الوميتال",
+      "تغير سلك الوميتال",
+      "تصليح سلك مقطوع",
+      "فك أو تركيب باب الوميتال",
+      "فك أو تركيب شباك الوميتال",
+      "تصليح أي مشكلة بفتح أو بغلق شباك أو باب الوميتال",],
+            "فني أثاث": ["تنظيف شامل للكرسي",
+      "تنظيف الانتريهات او الصالونات المنجد",
+      "تنظيف مرتبة سرير صغيرة",
+      "تنظيف مرتبة سرير كبيرة",],
+            "كهربائي": ["تصليح تليفون ومد سلك تليفون",
+      "تصليح كل أنواع الإضاءة",
+      "تصليح اعطال تيار كهربائي أو قفلات",
+      "تركيب أو مد أسلاك كهرباء",
+      "تركيب كل أنواع الإضاءة",
+      "تركيب وإصلاح جرس باب",
+      "تصليح وتركيب برايز وفيش مفاتيح كهرباء",
+      "تركيب وإصلاح مروحه سقف/ شفاط",],
+            "نجار": ["تصليح و تثبيت الترابيزات",
+      "تصليح و تثبيت الادراج و الدواليب",
+      "تصليح ترابيزات و كراسى السفرة",
+      "تركيب و تصليح غرف النوم",
+      "تثبيت و اصلاح الكراسى",
+      "تصليح و تثبيت الكنبة",
+      "تصليح و تعليق المكتبات",
+      "تثبيت وإصلاح أي باب",
+      "تركيب جميع أنواع اكسسوارات الباب",
+      "تركيب جميع أنواع الأبواب",
+      "تركيب سلك باب",
+      "تركيب أو إزالة أقفال و مقابض الأبواب",
+      "تعليق البراويز والمرايات واللوحات والتلفزيونات",
+      "تركيب الستائر و شماعات الستائر",
+      "إصلاح شباك خشب",
+      "اصلاح شباك خشب",
+      "تركيب سلك شباك",
+      "تركيب شباك خشب",
+      "تركيب أو إزالة أو إصلاح خزائن المطبخ",],
+            "فني سخانات": ["تركيب أو فك السخان القديم و الجديد",
+      "اصلاح التسريب من سخان المياه",
+      "تغيير جلدة رداخ",
+      "حل مشكلة المياه الساخنة",],
+            "سباك": ["إصلاح تسريب و انسداد أحواض الاستحمام",
+      "تركيب بانيو",
+      "تركييب خلاط البانيو",
+      "تركييب شاور بانيل",
+      "تركييب مسطرة",
+      "صرف البانيو مسدود",
+      "إصلاح انسداد البلاعات",
+      "تركيب اكسسوارات الحمام",
+      "تثبيت وإصلاح التواليت",
+      "تركيب وإصلاح الحنفيات",
+      "تركيب الأحواض",
+      "تثبيت الأحواض المهزوزه",
+      "تركيب و اصلاح الحنفية",
+      "صرف حوض",
+      "تركيب غسالات الملابس و اﻷطباق",
+      "تركيب فلتر مياه",
+      "تغيير شمعات فلتر مياه",
+      "فك فلتر مياه",
+      "تركيب وإصلاح مواسير المياه",
+      "تصليح أو تركيب خزانات المياه",
+      "اصلاح و تركيب مواتير المياه",],
+            "قدرات خاصه": ["تعديل ارتفاع الأحواض والمفاتيح لتناسب المستخدمين",
+      "تركيب أجراس أبواب ضوئية أو اهتزازية لضعاف السمع",
+      "صيانة الكراسي المتحركة أو الكراسي الكهربائية",
+      "تعقيم أدوات وأجهزة طبية أو كراسي متحركة",
+      "تركيب مقابض دعم في الحمام وعلى الحوائط",
+      "تركيب منحدرات بدلاً من السلالم",],
+            "تنظيف": ["مساحة منزل من ١٢١ الى ٢٠٠ متر",
+      "مساحة منزل من ٢٠١ الى ٢٥٠ متر",
+      "مساحة منزل من ٢٥١ الى ٣٠٠ متر",
+      "مساحة منزل من ٣٠١ الى ٣٥٠ متر",
+      "مساحة منزل من ٣٥١ الى ٤٠٠ متر",
+      "مساحة منزل من ٤٠١ الى ٥٠٠ متر",
+      "مساحة منزل من ٥٠١ الى ٦٠٠ متر",]
+        };
+
+        const jobSelect = document.getElementById('job-select');
+        const servicesContainer = document.getElementById('services-container');
+        const servicesList = document.getElementById('services-list');
+
+        jobSelect.addEventListener('change', () => {
+            const selectedJob = jobSelect.value;
+            servicesList.innerHTML = '';
+
+            if (jobServices[selectedJob]) {
+                jobServices[selectedJob].forEach(service => {
+                    const label = document.createElement('label');
+                    label.className = "checkbox-container";
+                    label.innerHTML = `
+                        <span>${service}</span>
+                        <input type="checkbox" name="services" value="${service}">
+                    `;
+                    servicesList.appendChild(label);
+                });
+
+                servicesContainer.style.display = 'block';
+            } else {
+                servicesContainer.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
